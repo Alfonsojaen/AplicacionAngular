@@ -9,7 +9,6 @@
     "test": "ng test",
     "serve:ssr:angular-fct": "node dist/angular-fct/server/server.mjs",
     "firebase:deploy": "ng build --configuration=production && firebase deploy --only hosting"
-    
   },
   "private": true,
   "dependencies": {
@@ -17,6 +16,7 @@
     "@angular/common": "^18.2.0",
     "@angular/compiler": "^18.2.0",
     "@angular/core": "^18.2.0",
+    "@angular/fire": "^18.0.1",
     "@angular/forms": "^18.2.0",
     "@angular/platform-browser": "^18.2.0",
     "@angular/platform-browser-dynamic": "^18.2.0",
@@ -27,6 +27,7 @@
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "express": "^4.18.2",
+    "firebase": "^10.14.1",
     "jquery": "^3.7.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
