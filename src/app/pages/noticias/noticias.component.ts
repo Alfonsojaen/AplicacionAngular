@@ -3,8 +3,8 @@ import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angula
 import { CommonModule } from '@angular/common';
 import { NewsService } from '../../services/news.service';
 import { News } from '../../models/news';
-import { TmdbService } from '../../services/tmdb.service'; 
 import { HttpClient, HttpClientModule, HttpHeaders } from '@angular/common/http';
+import { RecomendacionesComponent } from "../recomendaciones/recomendaciones.component";
 
 @Component({
   standalone: true,
@@ -15,9 +15,9 @@ import { HttpClient, HttpClientModule, HttpHeaders } from '@angular/common/http'
 export class NoticiasComponent implements OnInit {
   newsForm: FormGroup;
   newsList: News[] = [];
-  popularMovies: any[] = []; // Variable para almacenar las películas populares
+  popularMovies: any[] = []; 
 
-  constructor(private fb: FormBuilder, private newsService: NewsService, private tmdbService: TmdbService) { // Inyecta el servicio TmdbService
+  constructor(private fb: FormBuilder, private newsService: NewsService) { 
     this.newsForm = this.fb.group({
       title: ['', Validators.required],
       content: ['', Validators.required]
@@ -29,10 +29,6 @@ export class NoticiasComponent implements OnInit {
       this.newsList = news;
     });
 
-    // Llama al método getPopularMovies para obtener las películas populares
-    this.tmdbService.getPopularMovies().subscribe(movies => {
-      this.popularMovies = movies.results; // Guarda las películas populares en la variable
-    });
   }
 
   submitNews() {
@@ -50,3 +46,4 @@ export class NoticiasComponent implements OnInit {
     }
   }
 }
+

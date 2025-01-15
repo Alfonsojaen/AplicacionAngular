@@ -7,6 +7,7 @@ import { MovieEditComponent } from './pages/movie-edit/movie-edit.component';
 import { LoginGoogleComponent } from './components/login-google/login-google.component';
 import { AuthGuard } from './guards/auth.guard';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
+import { RecomendacionesComponent } from './pages/recomendaciones/recomendaciones.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -15,5 +16,6 @@ export const routes: Routes = [
     { path: 'peliculas/anadir', component: MovieAddComponent, canActivate: [AuthGuard] },
     { path: 'peliculas/editar/:id', component: MovieEditComponent, canActivate: [AuthGuard] },
     { path: 'login', component: LoginGoogleComponent },
+    { path: 'recomendaciones', component: RecomendacionesComponent },
     { path: '**', component: ErrorPageComponent } // Redirigir cualquier ruta no encontrada a la página de películas
 ];
