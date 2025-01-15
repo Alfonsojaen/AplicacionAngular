@@ -12,5 +12,4 @@ const extendedAppConfig = {
   ],
 };
 
-bootstrapApplication(AppComponent, extendedAppConfig)
-  .catch((err) => console.error(err));
+bootstrapApplication(AppComponent, extendedAppConfig).catch(err => console.error(err));

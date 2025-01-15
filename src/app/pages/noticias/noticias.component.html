@@ -1,35 +1,48 @@
 <div class="container mt-4">
-    <h2>Publicar Noticia</h2>
-    <form [formGroup]="newsForm" (ngSubmit)="submitNews()">
-      <div class="mb-3">
-        <label for="title" class="form-label">Título</label>
-        <input type="text" id="title" class="form-control" formControlName="title">
-        <div *ngIf="newsForm.get('title')?.invalid && newsForm.get('title')?.touched" class="text-danger">
-          El título es requerido.
-        </div>
+  <h2>Publicar Noticia</h2>
+  <form [formGroup]="newsForm" (ngSubmit)="submitNews()">
+    <div class="mb-3">
+      <label for="title" class="form-label">Título</label>
+      <input type="text" id="title" class="form-control" formControlName="title">
+      <div *ngIf="newsForm.get('title')?.invalid && newsForm.get('title')?.touched" class="text-danger">
+        El título es requerido.
       </div>
-      <div class="mb-3">
-        <label for="content" class="form-label">Contenido</label>
-        <textarea id="content" class="form-control" formControlName="content"></textarea>
-        <div *ngIf="newsForm.get('content')?.invalid && newsForm.get('content')?.touched" class="text-danger">
-          El contenido es requerido.
-        </div>
+    </div>
+    <div class="mb-3">
+      <label for="content" class="form-label">Contenido</label>
+      <textarea id="content" class="form-control" formControlName="content"></textarea>
+      <div *ngIf="newsForm.get('content')?.invalid && newsForm.get('content')?.touched" class="text-danger">
+        El contenido es requerido.
       </div>
-      <button type="submit" class="btn btn-primary" [disabled]="newsForm.invalid">Publicar</button>
-    </form>
-  
-    <h2 class="mt-5">Noticias Publicadas</h2>
-    <div class="row">
-      <div *ngFor="let news of newsList" class="col-md-4 mb-3">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">{{ news.title }}</h5>
-            <div class="card-text" style="max-height: 150px; overflow-y: auto;">
-              {{ news.content }}
-            </div>
-            <p class="card-text"><small class="text-muted">{{ news.date | date:'short' }}</small></p>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="newsForm.invalid">Publicar</button>
+  </form>
+
+  <h2 class="mt-5">Noticias Publicadas</h2>
+  <div class="row">
+    <div *ngFor="let news of newsList" class="col-md-4 mb-3">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">{{ news.title }}</h5>
+          <div class="card-text" style="max-height: 150px; overflow-y: auto;">
+            {{ news.content }}
           </div>
+          <p class="card-text"><small class="text-muted">{{ news.date | date:'short' }}</small></p>
         </div>
       </div>
     </div>
   </div>
+
+  <h2 class="mt-5">Películas Populares</h2>
+  <div class="row">
+    <div *ngFor="let movie of popularMovies" class="col-md-4 mb-3">
+      <div class="card h-100">
+        <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" class="card-img-top" alt="{{ movie.title }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ movie.title }}</h5>
+          <p class="card-text">{{ movie.overview }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
