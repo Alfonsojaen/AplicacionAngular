@@ -1,51 +1,179 @@
 <!-- Sección de Portada -->
-<section class="container-fluid bg-primary text-white text-center py-5">
-    <h1 class="display-3">Angular FCT</h1>
-    <p class="lead">
-      Una aplicación hecha con Angular para gestionar empresas de FCT en los
-      ciclos formativos.
-    </p>
-  </section>
-  <!-- Sección de Características -->
-  <section class="container mt-5">
-    <div class="row">
-      <!-- Bloque 1 -->
-      <div class="col-md-4 text-center mb-4">
-        <div class="icon-container mb-3">
-          <i class="bi bi-building text-primary" style="font-size: 4rem"></i>
-        </div>
-        <h3>Gestión de Empresas</h3>
-        <p>
-          Permite gestionar el listado de empresas que ofrecen prácticas a los
-          estudiantes de FCT.
-        </p>
+<section class="container-fluid bg-dark text-white text-center py-5">
+  <h1 class="display-3">Librería de Películas</h1>
+  <p class="lead">
+    Explora, gestiona y disfruta de una vasta colección de películas.
+  </p>
+  <a href="/peliculas" class="btn btn-primary btn-lg mt-3">Ver Películas</a>
+</section>
+
+<!-- Sección de Características -->
+<section class="container mt-5">
+  <div class="row">
+    <!-- Bloque 1 -->
+    <div class="col-md-4 text-center mb-4">
+      <div class="icon-container mb-3">
+        <i class="bi bi-film text-primary" style="font-size: 4rem"></i>
       </div>
-  
-      <!-- Bloque 2 -->
-      <div class="col-md-4 text-center mb-4">
-        <div class="icon-container mb-3">
-          <i class="bi bi-person-circle text-primary" style="font-size: 4rem"></i>
-        </div>
-        <h3>Gestión de Estudiantes</h3>
-        <p>
-          Facilita el registro y seguimiento de los estudiantes que realizan las
-          prácticas en las empresas.
-        </p>
+      <h3>Catálogo Extenso</h3>
+      <p>
+        Accede a una amplia variedad de películas de todos los géneros y épocas.
+      </p>
+    </div>
+
+    <!-- Bloque 2 -->
+    <div class="col-md-4 text-center mb-4">
+      <div class="icon-container mb-3">
+        <i class="bi bi-star text-primary" style="font-size: 4rem"></i>
       </div>
-  
-      <!-- Bloque 3 -->
-      <div class="col-md-4 text-center mb-4">
-        <div class="icon-container mb-3">
-          <i
-            class="bi bi-gear-wide-connected text-primary"
-            style="font-size: 4rem"
-          ></i>
+      <h3>Películas Destacadas</h3>
+      <p>
+        Descubre las películas más populares y mejor valoradas por nuestros usuarios.
+      </p>
+    </div>
+
+    <!-- Bloque 3 -->
+    <div class="col-md-4 text-center mb-4">
+      <div class="icon-container mb-3">
+        <i class="bi bi-person-circle text-primary" style="font-size: 4rem"></i>
+      </div>
+      <h3>Perfil Personalizado</h3>
+      <p>
+        Crea y personaliza tu perfil para llevar un registro de tus películas favoritas.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Sección de Películas Destacadas -->
+<section class="container mt-5">
+  <h2 class="text-center mb-4">Películas Destacadas</h2>
+  <div id="carouselExampleIndicators" class="carousel slide small-carousel" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://pics.filmaffinity.com/Regreso_al_futuro-139415628-large.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Película 1</h5>
+          <p>Descripción de la película 1.</p>
         </div>
-        <h3>Control de Conexión</h3>
-        <p>
-          Permite hacer el seguimiento de la relación entre empresas y estudiantes
-          durante el período de FCT.
-        </p>
+      </div>
+      <div class="carousel-item">
+        <img src="https://pics.filmaffinity.com/Pulp_Fiction-210382116-large.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Película 1</h5>
+          <p>Descripción de la película 1.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://hips.hearstapps.com/es.h-cdn.co/crfes/images/ninos/ocio/peliculas-para-ver-en-familia/brave-indomable/3633391-1-esl-ES/Brave-Indomable.jpg?resize=980:*" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Película 3</h5>
+          <p>Descripción de la película 3.</p>
+        </div>
       </div>
     </div>
-  </section>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+
+<!-- Sección de Trivia de Películas -->
+<section class="container mt-5">
+  <h2 class="text-center mb-4">Trivia de Películas</h2>
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="card flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="https://www.lavanguardia.com/peliculas-series/images/movie/poster/2025/1/w300/6qPzzRipjXVnwJXecKn7XwdHSvJ.jpg" class="card-img-top" alt="Trivia 1">
+            <div class="card-body">
+              <h5 class="card-title">Trivia 1</h5>
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <div class="card-body">
+              <p class="card-text">Recaudó un 200% de su presupuesto</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/las-cronicas-de-narnia-66ca0a8ab3845.jpg?crop=1xw:1xh;center,top&resize=980:*" class="card-img-top" alt="Trivia 2">
+            <div class="card-body">
+              <h5 class="card-title">Trivia 2</h5>
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <div class="card-body">
+              <p class="card-text">Participaron 2000 personas y no usaron efectos especiales</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="https://lumiere-a.akamaihd.net/v1/images/image_81e2d881.jpeg?region=0%2C0%2C540%2C810&width=320" class="card-img-top" alt="Trivia 3">
+            <div class="card-body">
+              <h5 class="card-title">Trivia 3</h5>
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <div class="card-body">
+              <p class="card-text">En esta pelicula ganaron 4 oscars</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sección de Contacto -->
+<section class="container mt-5">
+  <h2 class="text-center mb-4">Contacto</h2>
+  <div class="row">
+    <div class="col-md-6 mb-4">
+      <form>
+        <div class="mb-3">
+          <label for="name" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="name" placeholder="Tu nombre">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Tu email">
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Mensaje</label>
+          <textarea class="form-control" id="message" rows="3" placeholder="Tu mensaje"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+    <div class="col-md-6 mb-4">
+      <h5>Dirección</h5>
+      <p>Calle Falsa 123, Ciudad, País</p>
+      <h5>Teléfono</h5>
+      <p>+123 456 789</p>
+      <h5>Email</h5>
+      <p>contactolibreriadepeliculas.com</p>
+    </div>
+  </div>
+</section>

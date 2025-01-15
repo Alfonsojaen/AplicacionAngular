@@ -1,0 +1,61 @@
+<section class="container mt-4">
+  <h2 class="">Editar película {{ movie.title }}</h2>
+  <app-notification *ngIf="showAlert" [alertClass]="alertClass" [alertMessage]="alertMessage"/>
+  <form (submit)="updateMovie()">
+    <div class="form-group mb-4">
+      <label for="title">Título</label>
+      <input
+        class="form-control"
+        id="title"
+        name="title"
+        type="text"
+        [(ngModel)]="movie.title"
+      />
+    </div>
+    <div class="form-group mb-4">
+      <label for="director">Director</label>
+      <input
+        class="form-control"
+        id="director"
+        name="director"
+        type="text"
+        [(ngModel)]="movie.director"
+      />
+    </div>
+    <div class="form-group mb-4">
+      <label for="genre">Género</label>
+      <input
+        class="form-control"
+        id="genre"
+        name="genre"
+        type="text"
+        [(ngModel)]="movie.genre"
+      />
+    </div>
+    <div class="form-group mb-4">
+      <label for="releaseYear">Año de lanzamiento</label>
+      <input
+        class="form-control"
+        id="releaseYear"
+        name="releaseYear"
+        type="number"
+        [(ngModel)]="movie.releaseYear"
+      />
+    </div>
+    <div class="form-group mb-4">
+      <label for="poster">Póster (URL)</label>
+      <input
+        class="form-control"
+        id="poster"
+        name="poster"
+        type="text"
+        [(ngModel)]="movie.poster"
+      />
+    </div>
+    <div class="d-grid gap-2 d-md-block">
+      <button type="submit" class="btn btn-primary mt-3">
+        <i class="bi bi-pencil"></i> Editar
+      </button>
+    </div>
+  </form>
+</section>

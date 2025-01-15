@@ -1,0 +1,56 @@
+<section class="container mt-4">
+  <h2 class="">Añadir película</h2>
+  <app-notification *ngIf="showAlert" [alertClass]="alertClass" [alertMessage]="alertMessage"/>
+  <form [formGroup]="movieForm" (submit)="submitMovie()">
+    <div class="form-group mb-4">
+      <label for="title">Título</label>
+      <input
+        class="form-control"
+        id="title"
+        type="text"
+        formControlName="title"
+      />
+    </div>
+    <div class="form-group mb-4">
+      <label for="director">Director</label>
+      <input
+        class="form-control"
+        id="director"
+        type="text"
+        formControlName="director"
+      />
+    </div>
+    <div class="form-group mb-4">
+      <label for="genre">Género</label>
+      <input
+        class="form-control"
+        id="genre"
+        type="text"
+        formControlName="genre"
+      />
+    </div>
+    <div class="form-group mb-4">
+      <label for="releaseYear">Año de lanzamiento</label>
+      <input
+        class="form-control"
+        id="releaseYear"
+        type="number"
+        formControlName="releaseYear"
+      />
+    </div>
+    <div class="form-group mb-4">
+      <label for="poster">Póster (URL)</label>
+      <input
+        class="form-control"
+        id="poster"
+        type="text"
+        formControlName="poster"
+      />
+    </div>
+    <div class="d-grid gap-2 d-md-block">
+      <button type="submit" class="btn btn-primary mt-3">
+        <i class="bi bi-plus-lg"></i> Añadir
+      </button>
+    </div>
+  </form>
+</section>

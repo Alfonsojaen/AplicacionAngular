@@ -1,0 +1,25 @@
+/* Estilos para el carrusel */
+.small-carousel {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .carousel-image {
+    height: 300px;
+    object-fit: cover;
+  }
+  
+
+  
+  /* Estilos para evitar que el formulario y el trivia se solapen */
+  @media (min-width: 768px) {
+    .container .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  
+    .container .row > div {
+      flex: 1;
+      min-width: 300px;
+    }
+  }

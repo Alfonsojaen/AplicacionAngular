@@ -1,0 +1,15 @@
+.movies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .movie {
+    flex: 1 1 calc(25% - 20px);
+    box-sizing: border-box;
+  }
+  
+  .movie img {
+    width: 100%;
+    height: auto;
+  }

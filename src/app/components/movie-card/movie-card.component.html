@@ -1,0 +1,18 @@
+<!-- filepath: /c:/Users/ariza/Desktop/AplicacionAngular/src/app/components/movie-card/movie-card.component.html -->
+<div class="card mb-4" style="width: 18rem;">
+    <img src="{{ movie.poster }}" class="card-img-top" alt="{{ movie.title }}">
+    <div class="card-body">
+      <h5 class="card-title">{{ movie.title }}</h5>
+      <p class="card-text"><strong>Director:</strong> {{ movie.director }}</p>
+      <p class="card-text"><strong>Género:</strong> {{ movie.genre }}</p>
+      <p class="card-text"><strong>Año de lanzamiento:</strong> {{ movie.releaseYear }}</p>
+      <div class="d-flex flex-row gap-2 align-items-center">
+        <a [routerLink]="['/peliculas/editar', movie.id]" class="btn btn-secondary btn-sm">
+          <i class="bi bi-pencil"></i> Editar
+        </a>
+        <button (click)="deleteMovie(movie.id!)" class="btn btn-danger btn-sm">
+          <i class="bi bi-trash"></i> Eliminar
+        </button>
+      </div>
+    </div>
+  </div>
