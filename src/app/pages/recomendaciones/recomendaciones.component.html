@@ -1,14 +1,59 @@
 <div class="container mt-4">
-    <h2 class="mt-5">Películas Populares</h2>
-<div class="row">
-  <div *ngFor="let movie of popularMovies" class="col-md-4 mb-3">
-    <div class="card h-100">
-      <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" class="card-img-top" alt="{{ movie.title }}">
-      <div class="card-body">
-        <h5 class="card-title">{{ movie.title }}</h5>
-        <p class="card-text">{{ movie.overview }}</p>
+    <div class="row justify-content-center">
+      <!-- Sección de búsqueda -->
+      <div class="col-md-8">
+        <h2 class="mt-5">Buscar Películas</h2>
+        <form [formGroup]="searchForm" (ngSubmit)="onSearch()">
+          <div class="input-group mb-3">
+            <input formControlName="query" class="form-control" placeholder="Buscar películas...">
+            <button class="btn btn-primary" type="submit">Buscar</button>
+          </div>
+        </form>
+        <h3>Resultados de Búsqueda</h3>
+        <div class="row">
+          <div *ngFor="let movie of searchResults" class="col-md-3 mb-3">
+            <div class="card h-100">
+              <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" class="card-img-top" alt="{{ movie.title }}">
+              <div class="card-body">
+                <h5 class="card-title">{{ movie.title }}</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Sección de películas populares -->
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <h2 class="mt-5">Películas Populares</h2>
+        <div class="row">
+          <div *ngFor="let movie of popularMovies" class="col-md-3 mb-3">
+            <div class="card h-100">
+              <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" class="card-img-top" alt="{{ movie.title }}">
+              <div class="card-body">
+                <h5 class="card-title">{{ movie.title }}</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <!-- Sección de películas mejor valoradas -->
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h2 class="mt-5">Películas Mejor Valoradas</h2>
+      <div class="row">
+        <div *ngFor="let movie of topRatedMovies" class="col-md-3 mb-3">
+          <div class="card h-100">
+            <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" class="card-img-top" alt="{{ movie.title }}">
+            <div class="card-body">
+              <h5 class="card-title">{{ movie.title }}</h5>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
-</div>
+  </div>
