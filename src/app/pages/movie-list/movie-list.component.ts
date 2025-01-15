@@ -1,4 +1,3 @@
-// filepath: /c:/Users/ariza/Desktop/AplicacionAngular/src/app/pages/movie-list/movie-list.component.ts
 import { Component, OnInit } from '@angular/core';
 import { MovieService } from '../../services/movie.service';
 import { Movie } from '../../models/movie';
@@ -14,12 +13,14 @@ import { MovieCardComponent } from '../../components/movie-card/movie-card.compo
 })
 export class MovieListComponent implements OnInit {
   movies: Movie[] = [];
+  loading: boolean = true;
 
   constructor(private movieService: MovieService) {}
 
   ngOnInit(): void {
     this.movieService.getMovies().subscribe((movies) => {
       this.movies = movies;
+      this.loading = false;
     });
   }
 

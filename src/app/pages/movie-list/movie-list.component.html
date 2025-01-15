@@ -1,14 +1,27 @@
-<!-- filepath: /c:/Users/ariza/Desktop/AplicacionAngular/src/app/pages/movie-list/movie-list.component.html -->
 <div class="container mt-4">
-  <h2>Películas</h2>
-  <div class="row">
-    <div class="col-md-4" *ngFor="let movie of movies">
-      <app-movie-card [movie]="movie"></app-movie-card>
+  <h2>Lista de Películas</h2>
+
+  <!-- Botón de añadir películas -->
+  <div class="mb-3">
+    <a [routerLink]="['/peliculas/anadir']" class="btn btn-primary">Añadir Película</a>
+  </div>
+
+  <!-- Spinner de carga -->
+  <div *ngIf="loading" class="d-flex justify-content-center">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Cargando...</span>
     </div>
   </div>
-  <div class="d-grid gap-2 d-md-block mt-4">
-    <a [routerLink]="['/peliculas/anadir']" class="btn btn-primary" href="#" role="button">
-      <i class="bi bi-plus-lg"></i> Añadir película
-    </a>
+
+  <!-- Mensaje si no hay películas -->
+  <div *ngIf="!loading && movies.length === 0" class="alert alert-info" role="alert">
+    No hay películas disponibles.
+  </div>
+
+  <!-- Lista de películas -->
+  <div *ngIf="!loading && movies.length > 0" class="row">
+    <div *ngFor="let movie of movies" class="col-md-4 mb-3">
+      <app-movie-card [movie]="movie"></app-movie-card>
+    </div>
   </div>
 </div>
