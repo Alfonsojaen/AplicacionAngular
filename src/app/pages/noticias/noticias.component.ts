@@ -3,32 +3,35 @@ import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angula
 import { CommonModule } from '@angular/common';
 import { NewsService } from '../../services/news.service';
 import { News } from '../../models/news';
-import { HttpClient, HttpClientModule, HttpHeaders } from '@angular/common/http';
-import { RecomendacionesComponent } from "../recomendaciones/recomendaciones.component";
+import { HttpClientModule } from '@angular/common/http';
+import { AuthService } from '../../services/auth.service';
+import { Observable } from 'rxjs';
+import { User } from '@angular/fire/auth';
+import { LoginGoogleComponent } from '../../components/login-google/login-google.component';
 
 @Component({
   standalone: true,
   selector: 'app-noticias',
   templateUrl: './noticias.component.html',
-  imports: [CommonModule, ReactiveFormsModule, HttpClientModule]
+  imports: [CommonModule, ReactiveFormsModule, HttpClientModule, LoginGoogleComponent]
 })
 export class NoticiasComponent implements OnInit {
   newsForm: FormGroup;
   newsList: News[] = [];
-  popularMovies: any[] = []; 
+  user$: Observable<User | null>;
 
-  constructor(private fb: FormBuilder, private newsService: NewsService) { 
+  constructor(private fb: FormBuilder, private newsService: NewsService, private authService: AuthService) { 
     this.newsForm = this.fb.group({
       title: ['', Validators.required],
       content: ['', Validators.required]
     });
+    this.user$ = this.authService.getUser();
   }
 
   ngOnInit() {
     this.newsService.getNews().subscribe(news => {
       this.newsList = news;
     });
-
   }
 
   submitNews() {
@@ -46,4 +49,3 @@ export class NoticiasComponent implements OnInit {
     }
   }
 }
-

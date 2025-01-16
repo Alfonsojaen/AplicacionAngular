@@ -1,5 +1,8 @@
-.card-text a {
-    cursor: pointer;
-    color: blue;
-    text-decoration: underline;
-  }
+.news-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.news-item {
+  width: 100%;
+}

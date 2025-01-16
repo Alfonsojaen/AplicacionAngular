@@ -19,8 +19,10 @@ export class MovieListComponent implements OnInit {
 
   ngOnInit(): void {
     this.movieService.getMovies().subscribe((movies) => {
-      this.movies = movies;
-      this.loading = false;
+      setTimeout(() => {
+        this.movies = movies;
+        this.loading = false;
+      }, 1000); // Retraso de 3 segundos
     });
   }
 

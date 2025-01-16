@@ -51,7 +51,7 @@ export class MovieEditComponent implements OnInit {
         this.alertMessage = `Película editada correctamente`;
         this.alertClass = "success";
         this.showAlert = true;
-        this.router.navigate(['/peliculas']); // Redirigir a la lista de películas
+        this.router.navigate(['/movies']); // Redirigir a la lista de películas
       }).catch((error) => {
         this.alertMessage = `Error al editar la película: ${error}`;
         this.alertClass = "danger";

@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "aplicacionangular-20675"
-  }
+    "default": "aplicacionangular-20675",
+    "juanma": "aplicacionangular-20675"
+  },
+  "targets": {},
+  "etags": {}
 }
