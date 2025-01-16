@@ -1,27 +1,44 @@
-# AngularFct
+# AplicacionAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.12.
+Este es un proyecto de una aplicación web desarrollada con Angular. La aplicación está diseñada para demostrar las capacidades de Angular y proporcionar una base sólida para proyectos futuros.
 
-## Development server
+## Descripción
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+La temática principal de la aplicación son las películas, y se ha integrado con la API de TMDb para obtener datos de películas en tiempo real, como títulos, descripciones y más.
 
-## Code scaffolding
+## Tecnologías Utilizadas
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **TypeScript**: 56.9%
+- **HTML**: 41.7%
+- **CSS**: 1.4%
+- **Angular**: Framework principal para la construcción de la aplicación.
+- **Bootstrap**: Utilizado para el diseño y la responsividad de la interfaz de usuario.
+- **API de TMDb**: Fuente de datos para la información de las películas.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Requisitos Previos
 
-## Running unit tests
+Antes de empezar, asegúrate de tener instalados los siguientes programas:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Node.js (versión 14 o superior)
+- npm (versión 6 o superior)
+- Angular CLI
 
-## Running end-to-end tests
+## Instalación
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Sigue estos pasos para instalar y ejecutar la aplicación en tu máquina local:
 
-## Further help
+1. Clona este repositorio:
+   git clone https://github.com/Alfonsojaen/AplicacionAngular.git
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+3. Accede al directorio del proyecto:
+   cd AplicacionAngular
+
+4. Instala las dependencias necesarias:
+   npm install
+
+5. Inicia el servidor de desarrollo:
+   ng serve
+
+6. Abre tu navegador y accede a la aplicación en:
+   http://localhost:4200
